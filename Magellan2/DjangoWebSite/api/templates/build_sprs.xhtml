@@ -1,0 +1,28 @@
+<div class="build-data-div" style="color: black; font: normal 12px verdana;" >
+    <div style="word-wrap: break-word;">
+        {% for spr in sprs %}
+        	<table style=" width:99%; margin-bottom:7px; color: #404040; border: 1px solid #909090; font: normal 12px verdana;">
+        	<tr style="font-size:13px; height:15px;">
+        		<td colspan='2' style="background: #D0D0D0;" >
+                    <a onmouseover="this.style.background='#B0B0B0'; this.style.cursor='pointer'"
+                    onclick="javascript:funcUpdateSprBuildData(this)"
+                    onmouseout="this.style.background='#D0D0D0'; this.style.cursor='pointer'" >
+                    <b>{{ spr.spr_id }}</b>
+        			<a title="Open in FAST" href="../api/spr_shortcut?spr_id={{ spr.spr_id }}">
+	        		<img src="../static/images/aruser.png" width="15px" height="15px" style="margin-right:5; border:0; float:right;"/></a>
+        		</td>
+            </tr>
+            <tr>
+        		<td width="50%">{{ spr.component }}</td>
+        		<td width="50%">{{ spr.spr_status }}</td>
+        	</tr>
+        	<tr>
+        	<td colspan='2' style="word-wrap: break-word;">
+        		{{ spr.short_description_spr }}
+        	</td>
+        	</tr>
+        	</table>
+
+        {% endfor %}
+    </div>
+</div>
