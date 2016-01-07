@@ -1,0 +1,29 @@
+Build triggered by "admin" at ""09-08-25 05:10 +0200"".
+****************************************** Changes for clearcase *****************************************
+date:2009-08-24T12:11:07+02:00 user:fregus01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\adm\etc\alter_data_mssql.sql@@\main\br_prime4_3_absa\3 301552 Automatically add confirmation events when upgrading/installing ADM.
+
+date:2009-08-24T12:11:00+02:00 user:fregus01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\adm\etc\alter_data.sql@@\main\br_prime4_3_absa\3 301552 Automatically add confirmation events when upgrading/installing ADM.
+
+date:2009-08-24T13:37:59+02:00 user:jankar01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\appkit\src\funding.c@@\main\br_prime4_3_absa\0 
+date:2009-08-24T13:37:59+02:00 user:jankar01 action:create branch C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\appkit\src\funding.c@@\main\br_prime4_3_absa 
+date:2009-08-24T16:07:13+02:00 user:fregus01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\extensions\confirmation\etc\FConfirmationWeightedRateFixing.py@@\main\br_prime4_3_absa\5 300331 Minor fix
+
+date:2009-08-24T11:45:45+02:00 user:johfra01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\extensions\confirmation\etc\FConfirmationGeneral.py@@\main\br_prime4_3_absa\7 301317 For client events like Barrier Crossed cancellation on cancellation Confirmations are created.
+
+date:2009-08-24T11:42:49+02:00 user:johfra01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\extensions\confirmation\etc\FConfirmationInstrumentEvent.py@@\main\br_prime4_3_absa\8 301317 For client events like Barrier Crossed cancellation on cancellation Confirmations are created.
+
+date:2009-08-24T11:42:45+02:00 user:johfra01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\extensions\confirmation\etc\FConfirmationEvents.py@@\main\br_prime4_3_absa\3 301317 For client events like Barrier Crossed cancellation on cancellation Confirmations are created.
+
+date:2009-08-24T11:42:20+02:00 user:johfra01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\extensions\confirmation\etc\FConfirmationAMB.py@@\main\br_prime4_3_absa\11 301317 For client events like Barrier Crossed cancellation on cancellation Confirmations are created.
+
+date:2009-08-24T12:53:35+02:00 user:gusste01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\TM_FObject\Financial\FApplicationBase\FSysInit.cpp@@\main\br_prime4_3_absa\2 264097 Disabling Monis gridding
+
+date:2009-08-24T09:37:47+02:00 user:andmol01 action:create version C:\build\working\root\primefamily\primefamily_43absa_windows\release\checkouts\base\TM_FObject\Financial\Modules\CoreRiskModule.xmr@@\main\br_prime4_3_absa\12 294170 Not possible to use Delete to remove a value entered in the Hedge Quantity Column
+
+
+****************************************** Changes for linux_release_build *****************************************
+New build "primefamily-43absa_linux-20090825_1" is available.
+
+****************************************** Changes for solaris_release_build *****************************************
+New build "primefamily-43absa_solaris-20090825_1" is available.
+
