@@ -1,0 +1,3 @@
+recursive-include DjangoWebSite/static *.css *.js *.xhtml *.html *.swf *.gif *.jpg *.txt
+recursive-include DjangoWebSite/magellan2/templates *.xhtml
+recursive-include DjangoWebSite *.py
