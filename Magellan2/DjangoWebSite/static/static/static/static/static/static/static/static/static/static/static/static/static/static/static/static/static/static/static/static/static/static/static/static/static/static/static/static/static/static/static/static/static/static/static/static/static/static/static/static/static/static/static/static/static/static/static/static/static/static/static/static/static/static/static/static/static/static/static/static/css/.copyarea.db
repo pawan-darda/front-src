@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+testqa\Tools\Magellan2\DjangoWebSite\static\css
+2
+3
+c:magellan.css|1|1349d77efc7|131e|f9e93d7b|3a81da04d2bb458697d82e8d53f79b71|0
+b:version.css|1|134d582bc36|a39|10a572f0|0e6ba7e0dd1f483eae0a8b4313f57f51|0
+8:wall.css|1|134225edab2|128c|748a1a66|9018228209aa44439a7f6fcf8e449fb7|0

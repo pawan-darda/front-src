@@ -1,0 +1,265 @@
+/* ------------------------------------------------- */
+/* Main level ("base") */
+
+body {
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	color: black;
+	-khtml-user-select: none;
+	/*background: #ffffff;*/
+}
+
+.pagination{
+	padding: 5px;
+}
+
+/* Help dialogs formatting */
+
+.help-example {
+	color:#222222;
+	font-weight:bold;
+}
+
+.attribute_title {
+	font-weight:bold;
+}
+
+.ui-widget{
+	font-size:1em !important;
+}
+
+form.search-form {
+	margin-bottom: 0em;
+}
+
+.help-snippet {
+	color:#ff5555;
+	font-weight:bold;
+}
+
+.spr-buildcomment-panel{
+    height: 150px;
+    overflow: auto;
+}
+
+/* End of help dialogs formatting */
+
+td.duration {
+	width:40px;
+}
+	
+td.newval {
+	font: bold 11px verdana, arial, helvetica, sans-serif;
+}
+
+td.oldval {
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	color : gray;
+}
+
+td.error {
+	background: rgb(200,16,26) !important;
+    color: white;
+}
+
+td.crash {
+	background-color : #ff0000;
+}
+
+td.failed {
+	background-color : #ff9999;
+}
+
+td.passed {
+	background-color : lightgreen;
+}
+
+td.skipped {
+	background-color : #cccccc;
+}
+
+td.unknown {
+	background-color : #f2f2f2;
+}
+
+td.selected {
+	border: 3px inset;
+}
+
+/* ----------------------------------------- */
+/* Scenario page */
+
+table.scenario_list {	
+	padding: 3px 3px 3px 3px;
+	border: 1px hidden #660000;
+	background-color:#cccccc;
+}
+
+td.scenario_list_header {
+	font: bold 11px verdana, arial, helvetica, sans-serif;
+	border: 1px dotted;
+}
+
+tr.scenario_list_item {
+}
+
+td.scenario_list_name {
+	padding: 2px;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	background-color : white;
+	border: 1px #660000;
+	text-align: left;
+}
+
+
+table.version_list {	
+	padding: 5px 5px 5px 5px;
+	border: 1px hidden #660000;
+	background-color:#cccccc;
+}
+
+td.version_list_header {
+	font: bold 11px verdana, arial, helvetica, sans-serif;
+}
+
+td.version_list_item {
+	padding: 2px;
+	font: 11px verdana, arial, helvetica, sans-serif;
+	border: 1px plain #660000;
+	text-align: left;
+	background-color: white;
+}
+
+table.version_batch_list {	
+	padding: 5px 5px 5px 5px;
+	border: 1px hidden #660000;
+	background-color:#cccccc;
+}
+
+td.version_scenario_list_batch_item {
+	padding: 2px;
+	font: 11px verdana, arial, helvetica, sans-serif;
+	border: 1px plain #660000;
+	text-align: left;
+	background-color:white;
+}
+
+td.version_scenario_list_scenario_item {
+	padding: 2px;
+	font: 11px verdana, arial, helvetica, sans-serif;
+	border: 1px plain #660000;
+	text-align: left;
+	background-color:white;
+}
+
+
+/* ==================================================================== */
+/* ----------------------------------------- */
+
+table.scenario_content_header  {
+	border: 1px solid #660000;
+	background-color:#dddddd;
+	border-collapse:collapse;
+	font: 11px verdana, arial, helvetica, sans-serif;
+}
+
+td.scenario_content_header_key {
+	border: 1px solid #660000;
+	border-collapse:collapse;
+	width:100px;
+}
+
+td.scenario_content_header_value {
+	border: 1px solid #660000;
+	border-collapse:collapse;
+	text-align:right;
+	width:400px;
+}
+
+/* ================================================================== */
+
+table.scenario_content_all_steps {
+	padding: 1px;
+	border: 1px hidden #660000;
+	width: 100%;
+}
+
+td.scenario_content_all_steps {
+	padding: 5px;
+}
+
+table.scenario_content_step {	
+	padding: 0px 0px 0px 0px;
+	border: 1px solid gray;
+	background-color:#eeeeee;
+	width: 800px;
+}
+
+table.scenario_content_step_header, div.scenario_content_step_header {	
+	font: normal 12px verdana, arial, helvetica, sans-serif;
+}
+
+td.scenario_content_step_fixture {	
+	font: bold 12px verdana, arial, helvetica, sans-serif;
+	width:400px;
+}
+
+td.scenario_content_step_header {	
+	/*font: normal 11px verdana, arial, helvetica, sans-serif;*/
+}
+
+td.scenario_content_step_label {	
+	background-color:yellow;
+}
+
+table.scenario_content_step_init {	
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	border : 1px hidden;
+	/* border-collapse:collapse;*/
+}
+
+td.scenario_content_step_init_value {
+	border : 1px solid;
+	width: 200px;
+	background-color:lightgray;
+}
+
+td.scenario_content_step_init_key {
+	border : 1px solid;
+	width: 200px;
+	background-color:lightgray;
+}
+
+table.scenario_content_step_content {	
+	padding: 0px 0px 0px 0px;
+	border: 1px plain black;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	width: 100%;
+}
+
+td.scenario_content_col_out {
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	background-color : #E6E0C0;
+	border: 1px solid gray;
+}
+
+td.scenario_content_col_in {
+	padding: 1px;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	background-color : #C0C6E0;
+	border: 1px solid gray;
+}
+
+td.scenario_content_cell_out {
+	padding: 2px;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	border: 1px gray solid;
+	text-align: left;
+}
+
+td.scenario_content_cell_in {
+	padding: 2px;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	background-color : #b6e5ff;
+	border: 1px solid gray;
+	text-align: left;
+}

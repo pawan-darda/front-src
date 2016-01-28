@@ -1,0 +1,8 @@
+ClearCase CopyAreaDB|4
+testqa\Tools\Magellan2\DjangoWebSite\static\DataTables-1.7.2\media\js
+2
+4
+9:jquery.js|1|12ea355492c|119ed|1ae04188|10853de14126423aa1e70a7a2b1474d2|0
+14:jquery.dataTables.js|1|12ea35542bf|320af|86f1bd9c|4b7993ce794d499a9752863aadde5654|0
+18:jquery.dataTables.min.js|1|12ea3554424|fbe3|50e3afc2|77b0ecb278334b39a9cf2e599d499483|0
+1b:jquery.dataTables.min.js.gz|1|12ea3554547|44bc|6b0666c5|7e03732545cb4f159dfc6174db82decb|0

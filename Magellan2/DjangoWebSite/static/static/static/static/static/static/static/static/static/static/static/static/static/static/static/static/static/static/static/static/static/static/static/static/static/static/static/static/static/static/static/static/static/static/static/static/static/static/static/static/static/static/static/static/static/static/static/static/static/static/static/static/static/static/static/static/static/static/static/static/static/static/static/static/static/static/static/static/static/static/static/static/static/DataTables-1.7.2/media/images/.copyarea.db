@@ -1,0 +1,15 @@
+ClearCase CopyAreaDB|4
+testqa\Tools\Magellan2\DjangoWebSite\static\DataTables-1.7.2\media\images
+2
+b
+13:forward_enabled.jpg|1|12ea3553cef|354|12cc1ca5|87768f7287ad48bfa4eafd846d5fce13|0
+10:back_enabled.jpg|1|12ea3553c2c|327|5a4007ff|0c1ed06ab903438f8104e1a717d3288e|0
+15:sort_asc_disabled.png|1|12ea3553d36|fc|87f27307|d2826312e107455797f6c7751d72bed0|0
+14:forward_disabled.jpg|1|12ea3553c5e|27b|c04bae0f|84116a4114134f7bb11352623a299022|0
+b:favicon.ico|1|12ea3553c51|37e|fe85f2e4|d04a6f051da24520abeddfe662d970b9|0
+16:sort_desc_disabled.png|1|12ea3553d52|fb|d6df7302|f3bc159ac5214a37b5e5acc1ad968e89|0
+c:sort_asc.png|1|12ea3553d2c|107|73247ae2|208284070b634f0b8c8ff44efde58437|0
+d:sort_both.png|1|12ea3553d41|11a|545a809c|d6f881aed6f54052b3e3c6f21fa05b32|0
+11:back_disabled.jpg|1|12ea3553c21|264|b6c8a229|bbe0324a2cb7488b8d6b4dcb396a5163|0
+11:Sorting icons.psd|1|12ea3553cf9|6b62|4c9d2b3a|fac3e13ee23b403bb748c510edc96e3f|0
+d:sort_desc.png|1|12ea3553d4a|104|71787bb1|40ebced2bde449deb0d0f3700f4a9c89|0

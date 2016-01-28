@@ -1,0 +1,21 @@
+<table cellpadding='4' style=" width:99%; margin-top:7px; color: #404040;" >
+        <tr style="background: #E0ECF8; font: bold 14px verdana; height:16px; color: darkblue;" class='ui-widget-content ui-corner-all' >
+    		<td align="center" width="3%"> No.</td>
+            <td align="center" width="47%"> {{ task_add_len }} Tasks added to {{ build1.main}}.{{ build1.sub}}.{{ build1.bn}} compared to {{ build2.main}}.{{ build2.sub}}.{{ build2.bn}}</td>
+    		<td align="center" width="3%"> No. </td>
+            <td align="center" width="47%"> {{ task_rem_len }} Task removed from {{ build1.main}}.{{ build1.sub}}.{{ build1.bn}} compared to {{ build2.main}}.{{ build2.sub}}.{{ build2.bn}}</td>
+    	
+        </tr>
+        {% for task_a in tasks %}
+        	<tr >
+                <td align="center" width="3%"> {% if task_a.0%} {{forloop.counter}} {% endif %} </td>
+            	<td style="word-wrap: break-word;">
+            		{{ task_a.0.0 }}
+            	</td>
+                <td align="center" width="3%"> {% if task_a.1%} {{forloop.counter}} {% endif %} </td>
+                <td style="word-wrap: break-word;">
+                    {{ task_a.1.0 }}
+                </td>
+        	</tr>
+        {% endfor %}
+</table>
