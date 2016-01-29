@@ -1,0 +1,31 @@
+{% load asgard_tags %}
+<style type="text/css">
+	.odd {background-color: #D8D8D8;border: 1px solid #CCCCCC;}
+	.even {background-color: white;font:14px verdana;border: 1px solid #CCCCCC;}
+	.test_crash { background: black; color: white; }
+	.test_error { background: rgb(200,16,26); color: white; }
+	.test_failing { background: orange; color: #525252; }
+	.test_passing { background: rgb(86,120,0); color: white; }
+	.test_norun { background: #CFC8C8;}
+</style>
+<table width="98%">
+	<tr>
+		<th colspan=2 class = "{% if unittest.status == 0 %}test_passing{% endif %}{% if unittest.status == 1 %}test_failing{% endif %}
+		{% if unittest.status == 2 %}test_error{% endif %}{% if unittest.status == 4 %}test_crash{% endif %}"">{{ unittest.method }}</th>
+	</tr>
+	
+	<tr>
+		<td class='odd' style='font-weight:bold'>Class</td>
+		<td class='odd'>{{ unittest.classname }}</td>
+	</tr>
+	
+	<tr>
+		<td class='even' style='font-weight:bold'>File Path</td>
+		<td class='even'>{{ unittest.filepath }}</td>
+	</tr>
+
+	<tr>
+		<td class='odd' style='font-weight:bold'>Exception</td>
+		<td class='odd'>{{ unittest.exc_str }}</td>
+	</tr>
+</table>
