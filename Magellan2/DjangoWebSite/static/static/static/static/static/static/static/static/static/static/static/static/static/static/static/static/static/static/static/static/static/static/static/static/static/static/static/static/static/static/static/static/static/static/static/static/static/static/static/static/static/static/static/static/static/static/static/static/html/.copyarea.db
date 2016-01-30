@@ -1,9 +1,0 @@
-ClearCase CopyAreaDB|4
-testqa\Tools\Magellan2\DjangoWebSite\static\html
-2
-5
-a:id_qs.html|1|12ea355616a|9ab|182755b9|2558fd0a3ed34d2fa3755fe1d609ccd5|0
-a:id_qv.html|1|12ea355613a|a82|c70e412f|05a9ec5a642c414ea2c537b23799b41d|0
-a:id_qc.html|1|12ea3556156|25e|f5a9d484|559d97e2361b447f98cdab75c1fa752e|0
-d:id_qbase.html|1|12ea355614a|500|5be3b0b7|21be3ef9829841efbe719a1e36005108|0
-a:id_ql.html|1|12ea355615e|2dd|902efdce|2e2a9ec2fb6c4071b9092e518e381b79|0
