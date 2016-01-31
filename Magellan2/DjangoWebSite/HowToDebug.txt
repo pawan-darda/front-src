@@ -1,0 +1,21 @@
+In order to debug the application do the following steps.
+
+1. Configure the Magellan2 as a Pydev or Django project in ecplise env.
+   	a.Go to Project properties-> PyDev-PYTHONPATH ->
+		In external Libraries add 
+			"tools/services/frontdb"
+			"tools/services/front_utils"
+    
+2. Go to Project properties -> Run/Debug Setting -> New -> Python Django ->
+   a. In main select main project and select main module as manage.py from DjangoWebSite dir.
+   b. In argument tab enter program argument "runserver --noreload"
+   c. In common tab check Debug check box
+
+3. Go manage.py and follow the instruction in NOTE: section
+
+4. Put the break point on your desire debug location
+
+5. Start Python Debug on manage.py file using 'runserver --noreload' program
+    argument you can use the  run > debug configuration for that in Eclipe menu.
+
+6. Happy debugging ....
