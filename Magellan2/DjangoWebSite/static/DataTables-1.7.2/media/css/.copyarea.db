@@ -1,8 +1,0 @@
-ClearCase CopyAreaDB|4
-testqa\Tools\Magellan2\DjangoWebSite\static\DataTables-1.7.2\media\css
-2
-4
-12:demo_table_jui.css|1|12ea3553c05|21b3|7949a570|5a792e86a30844ea8ba9240e7b0674ea|0
-e:demo_table.css|1|12ea3553bf3|25d9|3e0422a3|5086ba2ad33c441e90ef5b2d5de816a5|0
-11:ci_demo_table.css|1|12ea3553c12|1b16|4d25a3ad|2ef39f9d5d2242d5adbe0554ec898fe3|0
-d:demo_page.css|1|12ea3553b8e|4fc|9688106|2e5cb745407948fdba08258ac094282f|0
