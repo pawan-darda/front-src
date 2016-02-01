@@ -1,0 +1,73 @@
+<project name="Services" default="testonly" basedir=".">
+	  <property name="python_dir" value="D:/Programs/Python251"/>
+	  <property name="nosetest_dir" value="${python_dir}/Scripts"/>
+	  <property name="origpath" value="${env.PATH}"/>
+
+	  <target name="clean">
+		   <mkdir dir="dist"/>       	
+		   <mkdir dir="build"/>       	
+	  	   <delete>
+	            <fileset dir="." includes="**/*.pyc"/>
+            <fileset dir="build" includes="**/*.*"/>
+            <fileset dir="dist" includes="**/*.*-py2.5.*"/>
+	       </delete>	
+	  </target>
+	
+	  <target name="egg.build"
+	        description="create an egg out of the code " >
+	  	 <exec executable="${python_dir}/python" dir=".">
+	     	<arg value="setup.py"/>
+	     	<arg value="bdist_egg"/>
+	     	<arg value="-v"/>
+	     	<env key="PYTHONHOME" value="${python_dir}"/>
+	     </exec>
+	  </target>
+	
+	  <target name="egg.uninstall"
+	        description="Uninstall the egg (does it work)? " >
+	  	<exec executable="${python_dir}/python" dir=".">
+	     	<arg value="setup.py"/>
+	     	<arg value="develop"/>
+	     	<arg value="--uninstall"/>
+	     	<arg value="-v"/>
+	     	<env key="PYTHONHOME" value="${python_dir}"/> 
+	     </exec>
+	  </target>
+	
+	  <target name="egg.install"
+	        description="install the egg" >
+	  	 <exec executable="${python_dir}/python" dir=".">
+	     	<arg value="setup.py"/> 
+	     	<arg value="install"/>
+	     	<arg value="-v"/> 
+	     	<env key="PYTHONHOME" value="${python_dir}"/>
+	     </exec>
+	  </target>
+	
+	  <target name="dev.install"
+	        description="install in dev mode" >
+	  	<exec executable="${python_dir}/python" dir=".">
+	     	<arg value="setup.py"/> 
+	     	<arg value="develop"/>
+	     	<arg value="-v"/> 
+	     	<env key="PYTHONHOME" value="${python_dir}"/>
+	     </exec>
+	  </target>
+	
+	  <target name="nosetests.run"
+	        description="run nosetests" >
+	     <exec executable="${nosetest_dir}/nosetests" failonerror="true">
+	     	<env key="Path" path="${origpath}:${nosetest_dir}"/>
+	     </exec>
+	  </target>
+
+        <target name="all"
+              description="build and test" 
+                      depends="clean, egg.uninstall, dev.install, nosetests.run, egg.build">
+        </target>
+        <target name="testonly"
+              description="build and test" 
+                      depends="nosetests.run">
+        </target>
+	
+</project>
