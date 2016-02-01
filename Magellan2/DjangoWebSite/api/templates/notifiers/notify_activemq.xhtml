@@ -1,0 +1,20 @@
+{% extends "notifier_base.xhtml" %} {% load asgard_tags %} 
+{# ---------------------------------------------------------------- #} 
+{% spaceless %} 
+
+{% block mail_content %} 
+	<table width="100%" style="border: 1px solid #CCCCCC ;">
+       	<tr class="header" style="font-weight:bold; text-align:center">
+           	<td>Queue Name</td>
+           	<td width='25%'>Pending Messages</td>
+       	</tr>                        
+
+	     {% for q in qDetails %}
+        	<tr class="{% cycle odd,even %}">
+            	<td>{{q.qName}}</td>
+            	<td width='25%'>{{q.qSize}}</td>
+        	</tr>                        
+		{% endfor %}
+	</table>
+{% endblock %}
+{% endspaceless %}            
