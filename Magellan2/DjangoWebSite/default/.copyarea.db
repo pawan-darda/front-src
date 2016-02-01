@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+testqa\Tools\Magellan2\DjangoWebSite\default
+2
+5
+8:tests.py|1|12ea3551fb9|202|4693a1ca|43e0615903dc473289b4fdac4f25ca71|0
+9:templates|2|0|0|0|6420f2ea8c1b488b82a82bf19b12a992|0
+b:__init__.py|1|12ea3551f8b|0|0|9424c6d2644e4708a67277e9edec96b2|0
+8:views.py|1|12ea35526c0|87|6d852f79|8040cb2f361343a29e207731d791eb74|0
+9:models.py|1|12ea3551fad|39|4ddd13d5|bad22cdaa44647f0a4997e25b32c8079|0
