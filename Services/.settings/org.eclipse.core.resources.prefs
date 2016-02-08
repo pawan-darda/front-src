@@ -1,8 +1,0 @@
-#Tue Aug 09 17:55:57 IST 2011
-eclipse.preferences.version=1
-encoding//front_db/front_db/asgard_db/__init__.py=latin1
-encoding//front_db/front_db/asgard_db/db_wrapper.py=latin1
-encoding//front_db/front_db/fast_db/__init__.py=latin1
-encoding//front_db/front_db/fast_db/direct_wrapper.py=latin1
-encoding//front_db/front_db/magellan_db/__init__.py=latin1
-encoding//front_db/front_db/magellan_db/mag_db_wrapper.py=latin1
