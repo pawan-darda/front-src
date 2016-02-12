@@ -1,0 +1,25 @@
+<div class="build-data-div" style=" color: black; font: normal 12px verdana;" >
+   <div style="word-wrap: break-word;">
+       {% for comment in comments %}       
+        <table style=" width:99%; margin-bottom:7px; color: #404040; border: 1px solid #909090; font: normal 12px verdana;">
+            <tr style="font-size:13px; height:15px;">
+                <td colspan='2' style="background: #D0D0D0;" >
+                    <a title="Open in FAST" href="../api/build_comment_shortcut?build_comment_id={{ comment.request_id}}">
+                    <img  src="../static/images/aruser.png" width="15px" height="15px" style=" margin-right:5; border:0"/>
+                    </a><b>{{ comment.clean_comment }}</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="40%">Approved :</td>
+                <td width="60%">{{ comment.regression_accepted_boolean }}</td>
+            </tr>
+            <tr>
+                <td width="40%">Approver :</td>
+                <td width="60%">{{ comment.regression_accepted_by }}</td>
+            </tr>
+       </table>
+        
+       {% endfor %}    
+   </div> 
+</div>   
+    
