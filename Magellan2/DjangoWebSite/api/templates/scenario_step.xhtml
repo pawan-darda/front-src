@@ -1,0 +1,114 @@
+{% load asgard_tags %}
+
+<style type="text/css">
+.duration {width:56px; text-align:right; padding:0px;}
+.scenario_table_header {padding: 1px; text-align: center; width: 100%; font: 13px verdana,arial,helvetica,sans-serif;}
+.circle_plus {width:16px; padding: 0px; margin-left: 1px; float:left}
+.white_background {background-color: white;}
+tr.centerText td {text-align:center;}
+.left {float:left;}
+</style>
+
+{% if scenario %}
+	<table class='scenario_table_header'><tbody>
+		<tr>
+			<th colspan="4" class=" {{ scenario|status_css_class }}">{{ scenario.name|spaceify }}</th>
+		</tr>
+		<tr class="odd centerText">
+			<th class='scenario_content_header_key'>Set</th>
+			<th class='scenario_content_header_key'>Version</th>
+			<th class='scenario_content_header_key'>Duration</th>
+			<th class='scenario_content_header_key'>Run on</th>
+		</tr>
+		<tr class="odd centerText">
+			<td class='scenario_content_header_value' >{{ scenario.batch.name }}</td>
+			<td class='scenario_content_header_value' colspan="">{{ scenario.batch.version.name }}</td>
+			<td class='scenario_content_header_value'  colspan="">{{ scenario.duration_time|time:"H \h i \m\i\n s \s" }} ({{ scenario.duration|floatformat:3 }} s)</td>
+			<td class='scenario_content_header_value'  colspan="">{{ scenario.batch.start }} ({{ scenario.batch.start|timesince }} ago)</td>
+		</tr>
+	</tbody></table>
+
+	{# ============== Content ========= #}
+	
+	<table class='scenario_content_all_steps' width="100%">
+		{% for step in scenario.steps.all %}
+				<tr>
+					<td class='scenario_content_all_steps'>
+						{# ========== Scenario step =========== #}
+						{# One table that contains 3 cells: header, init parameters, rows #}
+					<div id='{{ step.id }}'>
+						<table class='scenario_content_step' width="800px">
+							{# ========== Step header =========== #}
+							{# Duration, name, label if any #}
+							<tr>
+								<td>
+									<table class='scenario_content_step_header'>
+									<tr>
+									{% if step|has_error_info %}
+										<td class='duration scenario_content_step_header {{ step|status_css_class }}'>
+										<span class="circle_plus white_background ui-icon ui-icon-circle-plus pointer"  step_id ='{{step.id}}'>  </span>
+										{{ step.duration|floatformat:"3" }}</td>
+									{% else %}
+										<td class='duration scenario_content_step_header {{ step|status_css_class }}'>{{ step.duration|floatformat:"3" }}</td>
+									{% endif %}
+										<td class='scenario_content_step_fixture {{ step|status_css_class }} nopadding'>{{ step.fixture }}</td>
+					    				{%if step.label %}<td class='scenario_content_step_label'>  {{ step.label }} </td>{% endif %}
+									</tr>
+									</table>
+								</td>
+							</tr>
+					{# ========== Step inits if any =========== #}
+						{% if step.initParams %}
+							{# a table for init params #}
+							<tr><td><table class='scenario_content_step_init'>
+							{% for v in step.initParams.iteritems %}
+								<tr>
+									<td class='duration'/>
+									<td class='scenario_content_step_init_key'>{{ v.0 }} </td>
+								    <td class='scenario_content_step_init_value'>{{ v.1 }}</td>
+								</tr>
+							{% endfor %}
+							</table></td></tr>
+						{% endif %}
+					{# ========== Step Cells =========== #}
+						{% if step.columns.count %}
+							{# a table for all rows (plus columns) #}
+							<tr><td>
+								<table class="scenario_content_step_content">
+									<tr>
+									<td class='duration'></td>
+									{% for col in step.columns.all %}
+										<td class="{% if col.kind == 'o' %}scenario_content_col_out{% else %}scenario_content_col_in{% endif %}">
+											{{ col.name }}{% if col.kind == 'o' %}?{% endif %}
+										</td>		
+									{% endfor %}
+									</tr>
+									{% for row in step.all_rows.all %}
+										<tr>
+											{% if row|has_error_info %}
+												<td class='duration {{row|status_css_class}}'>
+												<span class="circle_plus white_background ui-icon ui-icon-circle-plus pointer" row_id='{{row.id}}'></span>
+												{{ row.duration|floatformat:"3" }}</td>
+											{% else %}
+												<td class='duration {{row|status_css_class}}'>{{ row.duration|floatformat:"3" }}</td>
+											{% endif %}
+											{% for cell in row.cells %}
+											{# The &nbsp; is here to make sure we can click on the div #}
+												<td class='{{ cell.s_status }} {{ cell|cell_class }}'>
+													{% if cell|has_error_info %}
+													<span class="circle_plus ui-icon ui-icon-circle-plus left" cell_id='{{cell.id}}'></span>
+													{% endif %}
+													<div class='cell' f_actual='{{ cell.f_actual }}'>{{ cell|cell_value }}</div>
+												</td>
+											{% endfor %}
+										</tr>		
+									{% endfor %}
+								</table>
+							</td></tr>
+						{% endif %}
+				</table>
+				</div>
+			</td></tr> 
+			{% endfor %}
+	</table>
+{% endif %}
