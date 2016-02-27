@@ -1,0 +1,49 @@
+{% load asgard_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<style type="text/css">
+	.odd {background-color: #D8D8D8; font:14px verdana;}
+	.even {background-color: white;font: 14px verdana;}
+	.odd_parameter {background-color:#E0ECF8; font:14px verdana; border: 1px solid #CCCCCC ;}
+	.even_parameter {background-color:#EFF5FB; font:14px verdana; border: 1px solid #CCCCCC ;}
+	.partition {background-color:#3C7882}
+	.header {background-color:#E0ECF8; font:14px verdana; border: 1px solid #CCCCCC ; }
+</style>
+
+{% block header %}  {% endblock %}
+
+<body>
+
+ 
+
+	{% if undefined_sc_ref %}
+	    <div>As no reference is defined, mail is being sent to debug mail list.</div>
+	{% else %}
+		{% if actual_mail_recipient|length %}
+	        <table>
+	            <tr><td>Mail notifier in debug mode. Actual mail directed to</td></tr>
+	            {% for actual in actual_mail_recipient%}
+	            <tr><td>{{ actual }}</td></tr>
+	            {% endfor %}
+	        </table>
+	    {% endif %}	
+	{% endif %} 
+	
+    <div>
+        <table width="100%">
+            <tr>
+            	<td style="height:30px; width:1%; margin-right:7px; margin-left:7px; color:white; background-color:black; font: bold 16px garamond";">S</td>
+            	<td style="height:30px; color:white; background-color:#3C7882; font:bold 16px garamond;">Continuous Integration</td>
+            </tr>
+            <tr>
+            	<td colspan=2>
+            		{% block mail_content %}  {% endblock %}
+            	</td>
+            </tr>
+        </table>
+     </div>
+ </body>
+ </html>            
