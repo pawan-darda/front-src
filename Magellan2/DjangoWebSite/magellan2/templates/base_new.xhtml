@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>{% block title %} Magellan {% endblock %}</title>  
+    <link rel="stylesheet" type="text/css" href="../static/aristo/css/Aristo/jquery-ui-1.8.5.custom.css?vtag={{ version_tag }}" />
+	<link rel="stylesheet" type="text/css" href="../static/css/magellan_new.css"/>
+	{% block header %} {% endblock %}
+
+</head>
+
+<body>
+<table id="base-table"  width='100%' border='0' cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="width:124px; max-width:124px; background:#000000;">
+			 <img id="sun_img"  src="../static/nav_images/sungard_logo.png" /> 
+		</td> 
+		<td style=" width:99%; background:#3C7882;" > 
+			<label style=" margin-left:12px; font: bold 16px arial ; color:#FFFFFF" > FRONT ARENA : MAGELLAN </label> 
+		</td> 
+	</tr>
+
+	<tr>
+		<td align="center" colspan='2' >
+			<div id='header-tabs'>
+				<ul>
+					<li><a href="#w_tab" style="width:90px" >Wall</a></li>
+					<li><a href="#v_tab" style="width:90px">Versions</a></li>
+					<li><a href="#a_tab" style="width:90px" >Asgard Graphs</a></li>
+					<li><a href="#ps_tab" style="width:90px" >Perf Shortcuts</a></li>
+					<li><a href="#po_tab" style="width:90px" >Perf Overview</a></li>
+				</ul>
+			<div id='w_tab' style=" display:none;" ></div>
+			<div id='v_tab' style=" display:none;" > </div>
+			<div id='a_tab'	style=" display:none;" > </div>
+			<div id='ps_tab' style=" display:none;" > </div>
+			<div id='po_tab' style=" display:none;" > </div>
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<td align="center" colspan='2' >
+			<p> testing things </p>
+			<div id ="filter">
+				{% block filter %}  {% endblock %}
+			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<td style="width:124px; max-width:124px;"> <img id="sun_img"  border="0" src="../static/nav_images/colorbars.png" > </img> </td> 
+		<td style="background:#3C7882" > <label style=" margin-left:12px; font: bold 12px arial ; color:#FFFFFF" > &copy 2012 SunGard All Rights Reserved</label> </td> 
+	</tr>
+
+
+	
+	<tr>
+		<td align='left' colspan='2'>
+			{% block content %}  {% endblock %}
+		</td>
+	</tr>
+	
+
+
+</table>
+
+
+
+<script type="text/javascript" src="../static/jquery-ui-1.8.11.custom/js/jquery-1.5.1.min.js?v={{ version_tag }}"></script>
+<script type="text/javascript" src="../static/jquery-ui-1.8.11.custom/js/jquery-ui-1.8.11.custom.min.js?v={{ version_tag }}"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){ 
+		$("#header-tabs").tabs({
+
+		});
+	}); 
+</script>
+
+<!--  <script type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/"> </script> -->
+<script type="text/javascript" src="../static/js/parseAnchor.js?v={{ version_tag }}"></script>
+<script type="text/javascript" src="../static/js/parseuri.js?v={{ version_tag }}"></script>
+<script type="text/javascript" src="../static/js/searchform.js?v={{ version_tag }}"></script>
+<script type="text/javascript" src="../static/js/navigation.js?v={{ version_tag }}"></script>
+{% block script %} {% endblock %}
+
+
+</body></html>
+
+
+
