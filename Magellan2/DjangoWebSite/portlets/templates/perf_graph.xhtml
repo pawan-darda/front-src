@@ -1,0 +1,33 @@
+{% load asgard_tags %}
+<div class="portlet-content">
+
+    <table width="98%" cellspacing="1" cellpadding="5"> 
+        <tbody>
+        <tr class="asg_header">
+            <td width=30% align="left" rowspan=3>
+                <div class="header_big_number" > {{ nicename }} </div>
+            </td>
+            <td width=70% align="center" >
+                <div > {{lable}} </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    
+    
+    <table width="98%" cellspacing="1" cellpadding="2"><tbody>                
+        <tr>
+            <td> 
+                <div class='pg_graph_div' style="width:100%; height:150px;" nicename= "{{nicename}}"
+                    scenario= "{{scenario}}" label= "{{lable}}" column= "{{column}}" show_zero ="{{show_zero}}"> 
+                </div>
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td  class="asg_scenarios ui-widget-content ui-corner-all" > {{ scenario|spaceify }} </td>
+        </tr>
+        
+    </tbody>
+    </table>    
+</div>
