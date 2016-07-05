@@ -1,0 +1,49 @@
+<html>
+<style type="text/css">
+	body {
+		background: url('../static/images/bg.png');
+		background-repeat:repeat;
+		background-attachment: fixed; }	
+	
+	#exception{
+			color:#FF5240;
+			font: normal 18px verdana, arial, helvetica, sans-serif;
+	}
+	
+	#error_text{
+			color:#7f7f7f;
+			font: normal 14px verdana, arial, helvetica, sans-serif;
+	}	
+</style>
+{% spaceless %}
+<table align="center" border='0' width="80%">
+	<tr id="error_text">
+		<td  align="left" width='30%' >
+			<a href="../magellan2/home">
+				<img id="mag_img1" border="0" src="../static/mag_org.png" style="margin-left:70px; margin-top:-5px;" />
+			</a>
+		</td>
+		<td align="right">
+			<label>HTTP {{error_code}}</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 align="center">
+			</br></br>
+			<table align="center"  border='0' cellspacing="1" cellpadding="3"  style=" width:70%; border:2px solid #888888;">
+				<tr id="exception">
+					<td colspan=2 align="center">
+						<div>Oops! It looks like we have made a mistake, something is wrong.</div> 
+					</td>
+				</tr>
+				<tr id="error_text">
+					<td colspan=2  align="center">
+						<div>Mail URL address to <a href="mailto:FRT.PO-QAP@sungard.com?Subject={{error_code}} error on Magellan page.">FRT.PO-QAP@sungard.com</a> for assistance.</div> 
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+{% endspaceless %}
+</html>
